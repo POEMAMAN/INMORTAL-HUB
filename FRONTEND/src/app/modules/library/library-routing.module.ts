@@ -39,6 +39,9 @@ const routes: Routes = [
     {
       path: 'crepusculoUniverse', canActivate: [verifyTokenGuard],loadChildren: () => import('./crepusculo-universe/crepusculo-universe.module').then(m => m.CrepusculoUniverseModule)
     },
+    {
+      path: 'lordOfTheRingsUniverse', canActivate: [verifyTokenGuard],loadChildren: () => import('./lordOfTheRings-universe/lordOfTheRings-universe.module').then(m => m.lordOfTheRingsUniverseModule)
+    },
     { path: 'favorites', component: FavoritesComponent },
     {
       path: '**', redirectTo: 'library', pathMatch: 'full'
